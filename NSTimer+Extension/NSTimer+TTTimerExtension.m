@@ -25,7 +25,6 @@ static inline void TT_swizzleClassSelector(Class class, SEL originalSelector, SE
 //static inline void TT_swizzleInstanceSelector(Class class, SEL originalSelector, SEL newSelector) {
 //    Method origMethod     = class_getInstanceMethod(class, originalSelector);
 //    Method swizzledMethod = class_getInstanceMethod(class, newSelector);
-//    Class metaClass       = object_getClass(class);
 //
 //    BOOL isAdd = class_addMethod(metaClass, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
 //    if(isAdd) {
