@@ -14,7 +14,6 @@
 		7D7128D31FE20BC9009EC7B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D7128D11FE20BC9009EC7B7 /* LaunchScreen.storyboard */; };
 		7D7128D61FE20BC9009EC7B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7128D51FE20BC9009EC7B7 /* main.m */; };
 		7D7128E71FE2573B009EC7B7 /* NSObject+TTKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7128E51FE2573B009EC7B7 /* NSObject+TTKVO.m */; };
-		7D7128E81FE2573B009EC7B7 /* TTObserverInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7128E61FE2573B009EC7B7 /* TTObserverInfo.m */; };
 		7D7128EB1FE25AD1009EC7B7 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7128EA1FE25AD1009EC7B7 /* NextViewController.m */; };
 		7D7128EE1FE25E8D009EC7B7 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7128ED1FE25E8D009EC7B7 /* TestObject.m */; };
 /* End PBXBuildFile section */
@@ -31,9 +30,7 @@
 		7D7128D41FE20BC9009EC7B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D7128D51FE20BC9009EC7B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7D7128E31FE2573B009EC7B7 /* NSObject+TTKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TTKVO.h"; sourceTree = "<group>"; };
-		7D7128E41FE2573B009EC7B7 /* TTObserverInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTObserverInfo.h; sourceTree = "<group>"; };
 		7D7128E51FE2573B009EC7B7 /* NSObject+TTKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TTKVO.m"; sourceTree = "<group>"; };
-		7D7128E61FE2573B009EC7B7 /* TTObserverInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTObserverInfo.m; sourceTree = "<group>"; };
 		7D7128E91FE25AD1009EC7B7 /* NextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
 		7D7128EA1FE25AD1009EC7B7 /* NextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		7D7128EC1FE25E8D009EC7B7 /* TestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
@@ -93,8 +90,6 @@
 			children = (
 				7D7128E31FE2573B009EC7B7 /* NSObject+TTKVO.h */,
 				7D7128E51FE2573B009EC7B7 /* NSObject+TTKVO.m */,
-				7D7128E41FE2573B009EC7B7 /* TTObserverInfo.h */,
-				7D7128E61FE2573B009EC7B7 /* TTObserverInfo.m */,
 			);
 			path = KVOSoure;
 			sourceTree = SOURCE_ROOT;
@@ -175,7 +170,6 @@
 				7D7128D61FE20BC9009EC7B7 /* main.m in Sources */,
 				7D7128EE1FE25E8D009EC7B7 /* TestObject.m in Sources */,
 				7D7128E71FE2573B009EC7B7 /* NSObject+TTKVO.m in Sources */,
-				7D7128E81FE2573B009EC7B7 /* TTObserverInfo.m in Sources */,
 				7D7128C81FE20BC9009EC7B7 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

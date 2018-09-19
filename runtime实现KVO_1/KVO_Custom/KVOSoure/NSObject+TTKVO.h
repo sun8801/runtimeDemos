@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TTObserverInfo.h"
+
+typedef void(^TTKVOCallBlock)(NSString *keyPath, id oldValue, id newValue);
 
 @interface NSObject (TTKVO)
 
@@ -18,7 +19,7 @@
  @param keyPath <#keyPath description#>
  @param block <#block description#>
  */
-- (void)tt_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath callBlock:(TTKVOCallBlockType )block;
+- (void)tt_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath callBlock:(TTKVOCallBlock )block;
 
 /**
  移除KVO

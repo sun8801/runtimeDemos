@@ -10,6 +10,18 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
+
+@interface TTObserverInfo : NSObject
+
++ (instancetype)observerInfo:(id)observer keyPath:(NSString *)keyPath callBlock:(TTKVOCallBlock) callBlock;
+
+@property (nonatomic, weak) id observer;
+@property (nonatomic, copy) NSString *keyPath;
+@property (nonatomic, copy) TTKVOCallBlock callBlock;
+
+@end
+
+// MARK: kvo变量
 //
 const void *TTObserversKey = &TTObserversKey;
 
@@ -108,11 +120,11 @@ static void TT_KVOSetterObj(id self, SEL _cmd, id newValue) {
     }
 }
 //整形
-static void TT_KVOSetterInt(id self, SEL _cmd, long tint)  {
+static inline void TT_KVOSetterInt(id self, SEL _cmd, long tint)  {
     TT_KVOSetterObj(self, _cmd, @(tint));
 }
 //浮点型
-static void TT_KVOSetterFloat(id self, SEL _cmd, double tfloat)  {
+static inline void TT_KVOSetterFloat(id self, SEL _cmd, double tfloat)  {
     TT_KVOSetterObj(self, _cmd, @(tfloat));
 }
 /** 获取value的类型 */
@@ -140,22 +152,24 @@ static char TT_KVOSetterVauleEncodeType(const char *encodeTypes) {
     i = 0;
     c_char = encodeTypes[i];
     while (c_char != '\0') {
+        // @encode(double) @encode(float)
         if (c_char == 'd' || c_char == 'f') {
             return 'f';
         }
+        //@encode(id)
         if (c_char == '@') {
             return '@';
         }
         i++;
         c_char = encodeTypes[i];
     }
-    
+    //@encode(int)
     return 'i';
 }
 
 @implementation NSObject (TTKVO)
 
-- (void)tt_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath callBlock:(TTKVOCallBlockType)block {
+- (void)tt_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath callBlock:(TTKVOCallBlock)block {
     if (!keyPath || kTTKVOStringOnlyIsWhitespaceAndNewline(keyPath) || !block) {
         return;
     }
@@ -213,6 +227,18 @@ static char TT_KVOSetterVauleEncodeType(const char *encodeTypes) {
             }
         }];
     }
+}
+
+@end
+
+@implementation TTObserverInfo
+
++ (instancetype)observerInfo:(id)observer keyPath:(NSString *)keyPath callBlock:(TTKVOCallBlock)callBlock {
+    TTObserverInfo *observerInfo = [TTObserverInfo new];
+    observerInfo.observer  = observer;
+    observerInfo.keyPath   = keyPath;
+    observerInfo.callBlock = callBlock;
+    return observerInfo;
 }
 
 @end
