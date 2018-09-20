@@ -35,9 +35,11 @@
 
 - (IBAction)changeBtnAction:(UIButton *)sender {
 
-    self.view.backgroundColor = [UIColor colorWithRed:(arc4random()%256)/255.0 green:(arc4random()%256)/255.0 blue:(arc4random()%256)/255.0 alpha:1];
+//    self.view.backgroundColor = [UIColor colorWithRed:(arc4random()%256)/255.0 green:(arc4random()%256)/255.0 blue:(arc4random()%256)/255.0 alpha:1];
     
     self.tObj.age = 15.5;
+    
+    sender.backgroundColor = [UIColor colorNamed:@"themeColor"];
 }
 
 

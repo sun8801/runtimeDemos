@@ -9,7 +9,11 @@
 #import "NextViewController.h"
 #import "NSObject+TTKVO.h"
 
+#import "NSTimer+TTTimerExtension.h"
+
 @interface NextViewController ()
+
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -30,6 +34,12 @@
     [self.tObj tt_addObserver:self forKeyPath:@"age" callBlock:^(NSString *keyPath, id oldValue, id newValue) {
         NSLog(@"**next***改变了年龄--%@》》》》》》",newValue);
     }];
+    
+    NSTimer *timer = [NSTimer timerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        
+    }];
+    
+    self.timer = timer;
     
 }
 

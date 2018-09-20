@@ -16,6 +16,7 @@
 		7D7128E71FE2573B009EC7B7 /* NSObject+TTKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7128E51FE2573B009EC7B7 /* NSObject+TTKVO.m */; };
 		7D7128EB1FE25AD1009EC7B7 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7128EA1FE25AD1009EC7B7 /* NextViewController.m */; };
 		7D7128EE1FE25E8D009EC7B7 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7128ED1FE25E8D009EC7B7 /* TestObject.m */; };
+		A4BD27962153475B00DE6E78 /* NSTimer+TTTimerExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BD27952153475B00DE6E78 /* NSTimer+TTTimerExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		7D7128EA1FE25AD1009EC7B7 /* NextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		7D7128EC1FE25E8D009EC7B7 /* TestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
 		7D7128ED1FE25E8D009EC7B7 /* TestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
+		A4BD27942153475B00DE6E78 /* NSTimer+TTTimerExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+TTTimerExtension.h"; sourceTree = "<group>"; };
+		A4BD27952153475B00DE6E78 /* NSTimer+TTTimerExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+TTTimerExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,7 @@
 		7D7128C51FE20BC8009EC7B7 /* KVO_Custom */ = {
 			isa = PBXGroup;
 			children = (
+				A4BD27932153472100DE6E78 /* NSTimer+Extension */,
 				7D7128E21FE2573B009EC7B7 /* KVOSoure */,
 				7D7128C61FE20BC9009EC7B7 /* AppDelegate.h */,
 				7D7128C71FE20BC9009EC7B7 /* AppDelegate.m */,
@@ -93,6 +97,16 @@
 			);
 			path = KVOSoure;
 			sourceTree = SOURCE_ROOT;
+		};
+		A4BD27932153472100DE6E78 /* NSTimer+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A4BD27942153475B00DE6E78 /* NSTimer+TTTimerExtension.h */,
+				A4BD27952153475B00DE6E78 /* NSTimer+TTTimerExtension.m */,
+			);
+			name = "NSTimer+Extension";
+			path = "../../../NSTimer+Extension";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -165,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4BD27962153475B00DE6E78 /* NSTimer+TTTimerExtension.m in Sources */,
 				7D7128CB1FE20BC9009EC7B7 /* ViewController.m in Sources */,
 				7D7128EB1FE25AD1009EC7B7 /* NextViewController.m in Sources */,
 				7D7128D61FE20BC9009EC7B7 /* main.m in Sources */,
