@@ -15,7 +15,11 @@
 
 @property (nonatomic, strong) NSTimer *timer;
 
+@property (nonatomic, weak) TestObject *objttt;
+
 @end
+
+static TestObject *objtt = nil;
 
 @implementation NextViewController
 
@@ -35,11 +39,15 @@
         NSLog(@"**next***改变了年龄--%@》》》》》》",newValue);
     }];
     
-    NSTimer *timer = [NSTimer timerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        
-    }];
-    
+//    NSTimer *timer = [NSTimer timerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//
+//    }];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(repeateTimer:) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     self.timer = timer;
+    
+    objtt = TestObject.new;
+    self.objttt = objtt;
     
 }
 
@@ -47,6 +55,10 @@
     self.view.backgroundColor = [UIColor colorWithRed:(arc4random()%256)/255.0 green:(arc4random()%256)/255.0 blue:(arc4random()%256)/255.0 alpha:1];
     
     self.tObj.age = 33.3f;
+}
+
+- (void)repeateTimer:(NSTimer *)timer {
+    NSLog(@"%@",timer);
 }
 
 @end

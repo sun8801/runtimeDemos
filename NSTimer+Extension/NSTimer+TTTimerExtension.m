@@ -78,9 +78,9 @@ static inline void TT_swizzleClassSelector(Class class, SEL originalSelector, SE
     }
 }
 
-- (void)dealloc {
-//    NSLog(@">>>%@>>>>dealloc>>>>",self.class);
-}
+//- (void)dealloc {
+////    NSLog(@">>>%@>>>>dealloc>>>>",self.class);
+//}
 
 @end
 
